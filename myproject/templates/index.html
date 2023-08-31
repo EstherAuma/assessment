@@ -1,0 +1,22 @@
+{%  extends 'base.html' %}
+{% block content %}
+<div class='container'>
+    <h1>Add Spare Part</h1>
+        <form action="{% url 'index' %}" method="post">
+            {%csrf_token%}
+            Spare Part Name:<br>
+            <input name="part_name" class="form-control" required>
+            <br><br>
+            Spare Part Number<br>
+            <input name="part_number" class="form-control" required>
+            <br><br>
+            Arrival Date<br>
+            <input name="arrival_date" class="form-control date" type="date" required>
+            <br><br>
+            Total Initial Stock<br>
+            <input name="total_initial_stock_quantity" class="form-control" required>
+            <br><br>
+            <button class="btn btn-outline-dark" type="submit" name="action"> Submit</button>
+        </form>
+</div>
+{% endblock %}
