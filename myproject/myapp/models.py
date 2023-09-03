@@ -10,8 +10,8 @@ class Customer(models.Model):
     district = models.CharField(max_length=20, null=False, blank=False)
     town = models.CharField(max_length=20, null=False, blank=False)
     zip_code = models.CharField(max_length=20, null=False, blank=False)
-    phone_number1 = models.IntegerField(default=0, null=False, blank=False)
-    phone_number2 = models.IntegerField(default=0, null=False, blank=False)
+    phone_number_1 = models.IntegerField(default=0, null=False, blank=False)
+    phone_number_2 = models.IntegerField(default=0, null=False, blank=False)
     email = models.EmailField()
 
     def __str__(self):
